@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./shokipedia.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <input type="checkbox" id="hamburger" hidden>
+        <label class="hamburger-label" for="hamburger">&#9776;</label>
+        <ul>
+            <li>
+                <label class="switch" title="Toggle dark mode">
+                    <input type="checkbox" id="theme-toggle-slider">
+                    <span class="slider">
+                        <span class="icon moon">🌙</span>
+                        <span class="icon sun">☀️</span>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <a href="./index.html">
+                    <img src="Images/home.webp" alt="Home Button" class="home">
+                </a>
+            </li>
+            <li>
+                <a href="./Strategies.html">אסטרטגית מסחר </a>
+            </li>
+            <li>
+                <a href="./stocks-options.html">אופציות</a>
+            </li>
+            <li>
+                <a href="./Indicators.html">אינדיקטורים</a>
+            </li>
+            <li>
+                <a href="./stocks.html">מניות</a>
+            </li>
+            <li>
+                <a href="./academy.html">האקדמיה לשוק ההון</a>
+                <ul class="opennav">
+                    <li><a href="./general-terms.html">מונחים כללים</a></li>
+                    <li><a href="./optiontrem.html">מונחים באופציות ונגזרים</a></li>
+                    <li><a href="#">מונחים גלובליים</a></li>
+                    <li><a href="./trading-psychology.html">פסיכולגיית מסחר</a></li>
+                </ul>
+            </li>
+            <li>
+                <img src="./Images/shokpedia-logo.webp" alt="shokpedia logo" class="logo">
+            </li>
+        </ul>
+    </nav>
+    <footer>
+        <section class="sitemap">
+            <h2>מפת האתר</h2>
+            <div class="sectionflex">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="./index.html">דף הבית</a>
+                        </li>
+                        <li>
+                            <a href="./academy.html">האקדמיה</a>
+                        </li>
+                        <li>
+                            <a href="./stocks.html">מניות</a>
+                        </li>
+                        <li>
+                            <a href="./Indicators.html">אינדיקטורים</a>
+                        </li>
+                        <li>
+                            <a href="./stocks-options.html">אופציות</a>
+                        </li>
+                        <li>
+                            <a href="./Strategies.html">אסטרטגית מסחר</a>
+                        </li>
+                        <li>
+                            <a href="./general-terms.html">מונחים כללים</a>
+                        </li>
+                        <li>
+                            <a href="./japanees-candels-structure.html">מבנה נרות יפניים</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="./optiontrem.html">מונחים באופציות ונגזרים</a>
+                        </li>
+                        <li>
+                            <a href="./trading-psychology.html">פסיכולגיית מסחר</a>
+                        </li>
+                        <li>
+                            <a href="./bidAndask.html">היצע וביקוש</a>
+                        </li>
+                        <li>
+                            <a href="./MarketCap.html">שווי שוק</a>
+                        </li>
+                        <li>
+                            <a href="./stock-split.html">פיצול מניות</a>
+                        </li>
+                        <li>
+                            <a href="./option-made-off.html">ממה בנויות אופציות</a>
+                        </li>
+                        <li>
+                            <a href="./japanees-candels.html">מבוא לנרות יפניים</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="credits">
+            <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel="noopener">
+                <img src="./Images/Omri-Digmi-Web-Developer-logo.png" alt="Omri digmi web developer logo"></a>
+            <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
+                Content and code on this site may not be copied or reused without permission.</p> <br>
+        </section>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleInput = document.getElementById('theme-toggle-slider');
+            const html = document.documentElement;
+            // Set initial state
+            if (html.getAttribute('data-theme') === 'dark') {
+                toggleInput.checked = true;
+            }
+            toggleInput.addEventListener('change', function () {
+                const newTheme = this.checked ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
+            });
+        });
+    </script>
+</body>
+
+</html>
